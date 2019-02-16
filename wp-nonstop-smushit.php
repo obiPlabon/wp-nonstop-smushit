@@ -8,7 +8,7 @@
  * @since       1.0.0
  * @package     WP_Nonstop_Smushit
  *
- * Plugin Name: WP Nonstop Smushit
+ * Plugin Name: Nonstop Smush
  * Plugin URI:  https://github.com/obiPlabon/wp-nonstop-smushit
  * Description: Disable bulk smash limit and enjoy a premium feature of <a href="https://wordpress.org/plugins/wp-smushit/" target="_blank">WP Smashit</a> completely FREE! Enjoy :D
  * Version:     1.0.0
