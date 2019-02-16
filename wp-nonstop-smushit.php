@@ -2,8 +2,7 @@
 /**
  * WP Nonstop Smushit plugin
  *
- * Dodge WP Smushit bulk smush limit by clicking on the bulk smush button automatically
- * whenever WP Smushit reaches the limit.
+ * Disable bulk smash limit and enjoy a premium feature of WP Smashit completely FREE!
  *
  * @link        https://github.com/obiPlabon/wp-nonstop-smushit
  * @since       1.0.0
@@ -11,7 +10,7 @@
  *
  * Plugin Name: WP Nonstop Smushit
  * Plugin URI:  https://github.com/obiPlabon/wp-nonstop-smushit
- * Description: <em>WP Smushit</em> is a superb plugin to compress images but there's a bulk smush limit (50 images) for Free users. So I've created <em>WP Nonstop Smushit</em> to rescue us :D Now enjoy the limitless smushing!
+ * Description: Disable bulk smash limit and enjoy a premium feature of <a href="https://wordpress.org/plugins/wp-smushit/" target="_blank">WP Smashit</a> completely FREE! Enjoy :D
  * Version:     1.0.0
  * Author:      obiPlabon
  * Author URI:  https://obiPlabon.im/
