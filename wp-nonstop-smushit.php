@@ -8,10 +8,10 @@
  * @since       1.0.0
  * @package     WP_Nonstop_Smushit
  *
- * Plugin Name: Nonstop Smush
+ * Plugin Name: Smush Nonstop
  * Plugin URI:  https://github.com/obiPlabon/wp-nonstop-smushit
- * Description: Disable bulk smash limit and enjoy a premium feature of <a href="https://wordpress.org/plugins/wp-smushit/" target="_blank">WP Smashit</a> completely FREE! Enjoy :D
- * Version:     1.0.1
+ * Description: Disable bulk smash limit and enjoy one of the most exciting premium feature of <a href="https://wordpress.org/plugins/wp-smushit/" target="_blank">WP Smashit</a> completely FREE 😉
+ * Version:     2.0.0
  * Author:      obiPlabon
  * Author URI:  https://obiPlabon.im/
  * License:     GPLv2
@@ -44,6 +44,16 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
     class WP_Nonstop_Smushit {
 
         /**
+         * Plugin version number
+         */
+        const VERSION = '2.0.0';
+
+        /**
+         * Plugin slug
+         */
+        const SLUG = 'wp-nonstop-smushit';
+
+        /**
          * WP_Nonstop_Smushit instance
          *
          * @var null
@@ -66,12 +76,19 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
          * WP_Nonstop_Smushit constructor.
          */
         protected function __construct() {
-            if ( ! class_exists( 'WP_Smush' ) ) {
+            if ( ! $this->has_wp_smushit() ) {
                 add_action( 'admin_notices', [ $this, 'show_dependency_missing_error' ] );
-                return;
+            } else {
+                add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
             }
+        }
 
-            add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+        /**
+         * Check the existence of WP Smushit plugin
+         * @return bool
+         */
+        protected function has_wp_smushit() {
+            return defined( 'WP_SMUSH_VERSION' ) || class_exists( '\Smush\WP_Smush' ) || class_exists( 'WP_Smush' );
         }
 
         /**
@@ -101,14 +118,15 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
         public function enqueue_scripts( $page ) {
             if ( $page === 'toplevel_page_smush' ) {
                 wp_enqueue_script(
-                    'wp_nonstop_smushit',
+                    self::SLUG,
                     plugin_dir_url( __FILE__ ) . 'assets/js/main.js',
                     null,
-                    '1.0.0',
+                    self::VERSION,
                     true
                 );
             }
         }
     }
 }
-add_action( 'plugins_loaded', [ 'WP_Nonstop_Smushit', 'get_instance' ] );
+
+add_action( 'plugins_loaded', [ 'WP_Nonstop_Smushit', 'get_instance' ], 20 );
