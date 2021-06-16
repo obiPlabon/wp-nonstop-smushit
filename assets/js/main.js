@@ -12,13 +12,13 @@
 
             var exceeded = mutation.target.classList.contains('wp-smush-exceed-limit');
             if (exceeded) {
-                document.querySelector('.wp-smush-all').click()
+                document.querySelector('.wp-smush-resume-scan').click()
             }
         });
     });
 
     observer.observe(
-        document.querySelector('.wp-smush-bulk-progress-bar-wrapper'),
+        document.querySelector('#wp-smush-progress-dialog'),
         { attributes: true }
         );
 
