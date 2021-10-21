@@ -1,12 +1,12 @@
 === Disable Bulk Smush Limit of WP Smushit ===
 Plugin Name: Disable Bulk Smush Limit of WP Smushit
-Version: 2.0.0
+Version: 2.0.1
 Author: obiPlabon
 Author URI: https://obiPlabon.im/
 Contributors: obiplabon
 Tags: wp smushit, image, compression, performance, optimization, disable
 Requires at least: 4.6
-Tested up to: 5.2.4
+Tested up to: 5.8.1
 Requires PHP: 5.4
 Stable tag: trunk
 License: GPLv2
@@ -30,6 +30,10 @@ Yes, it's completely free forever.
 = Will there be any problem from WP Smushit? ==
 
 == Changelog ==
+
+= 2.0.1 =
+
+* Fix: Compatibility issue with the latest **WP Smushit**
 
 = 2.0.0 =
 
