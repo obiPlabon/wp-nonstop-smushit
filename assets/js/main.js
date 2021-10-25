@@ -12,7 +12,8 @@
 
             var exceeded = mutation.target.classList.contains('wp-smush-exceed-limit');
             if (exceeded) {
-                document.querySelector('.wp-smush-all').click()
+                document.querySelector('.wp-smush-all').click();
+                document.querySelector('.wp-smush-all.sui-button').click(); // Standalone Bulk smush page
             }
         });
     });
