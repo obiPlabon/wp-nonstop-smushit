@@ -4,23 +4,25 @@
         return;
     }
 
-    var observer = new MutationObserver(function(mutationsList) {
-        mutationsList.forEach(function(mutation) {
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
             if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') {
                 return;
             }
 
             var exceeded = mutation.target.classList.contains('wp-smush-exceed-limit');
             if (exceeded) {
-                document.querySelector('.wp-smush-all').click();
-                document.querySelector('.wp-smush-all.sui-button').click(); // Standalone Bulk smush page
+                const button = mutation.target.querySelector('.wp-smush-resume-bulk-smush') ?? mutation.target.querySelector('.wp-smush-all');
+                
+                if (button) {
+                    button.click();
+                }
             }
         });
     });
 
-    observer.observe(
-        document.querySelector('.wp-smush-bulk-progress-bar-wrapper'),
-        { attributes: true }
-        );
-
+    const container = document.querySelector('.wp-smush-bulk-progress-bar-wrapper');
+    if (container) {
+        observer.observe(container, {attributes: true});
+    }
 })(window);

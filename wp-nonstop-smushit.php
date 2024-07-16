@@ -11,7 +11,7 @@
  * Plugin Name: Smush Nonstop
  * Plugin URI:  https://github.com/obiPlabon/wp-nonstop-smushit
  * Description: Disable bulk smash limit and enjoy one of the most exciting premium feature of <a href="https://wordpress.org/plugins/wp-smushit/" target="_blank">WP Smashit</a> completely FREE 😉
- * Version:     2.0.1
+ * Version:     2.1.0
  * Author:      obiPlabon
  * Author URI:  https://obiPlabon.im/
  * License:     GPLv2
@@ -46,7 +46,7 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
         /**
          * Plugin version number
          */
-        const VERSION = '2.0.1';
+        const VERSION = '2.1.0';
 
         /**
          * Plugin slug
@@ -116,8 +116,9 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
          * @return void
          */
         public function enqueue_scripts( $page ) {
-            $white_list = [ 'toplevel_page_smush', 'smush_page_smush-bulk' ];
-            if ( in_array( $page, $white_list ) ) {
+            $white_list = array( 'toplevel_page_smush', 'smush_page_smush-bulk' );
+
+            if ( in_array( $page, $white_list, true ) ) {
                 wp_enqueue_script(
                     self::SLUG,
                     plugin_dir_url( __FILE__ ) . 'assets/js/main.js',
