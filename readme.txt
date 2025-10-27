@@ -4,7 +4,7 @@ Tags: image optimization, compress images, image compressor, smush, wp-smushit
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://obiplabon.com/contact

@@ -11,7 +11,7 @@
  * Plugin Name: Disable Bulk Smush Limit of Smush Image Optimization
  * Plugin URI:  https://github.com/obiPlabon/wp-nonstop-smushit
  * Description: The free version of Smush Image Optimization has a bulk image optimization limit of 50 images per iteration. This plugin disables that limit and allows you to optimize unlimited images.
- * Version:     2.3.0
+ * Version:     2.2.1
  * Requires at least: 6.0
  * Tested up to: 6.8
  * Requires PHP: 7.4
@@ -50,7 +50,7 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
 		/**
 		 * Plugin version number
 		 */
-		const VERSION = '2.3.0';
+		const VERSION = '2.2.1';
 
 		/**
 		 * Plugin slug
