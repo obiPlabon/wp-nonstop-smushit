@@ -54,6 +54,10 @@ Yes, it has been tested with the latest WordPress (6.8) and Smush versions.
 
 == Changelog ==
 
+= 2.2.1 - Oct 27 2025 =
+
+* Fix: Version mismatch issue
+
 = 2.2.0 - Oct 27 2025 =
 
 * Fix: Compatibility issue with the latest **Smush Image Optimization**
