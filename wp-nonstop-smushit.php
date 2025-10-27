@@ -84,6 +84,13 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
 				add_action( 'admin_notices', [ $this, 'show_dependency_missing_error' ] );
 			} else {
 				add_action( 'admin_footer', [ $this, 'enqueue_scripts' ] );
+				add_action( 'admin_head', function() {
+					?>
+					<script>
+						!function(){const t=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(e,n,r){if("click"===e&&this.matches&&this.matches(".wp-smush-resume-bulk-smush")){const i=function(t){const e=new Proxy(t,{get(t,e){if("isTrusted"===e)return!0;if("clientX"===e)return t.clientX||100;if("clientY"===e)return t.clientY||100;const n=t[e];return"function"==typeof n?n.bind(t):n}});return n.call(this,e)};return t.call(this,e,i,r)}return t.call(this,e,n,r)}}();
+					</script>
+					<?php
+				}, 0 );
 			}
 		}
 
@@ -122,34 +129,35 @@ if ( ! class_exists( 'WP_Nonstop_Smushit' ) ) {
 		public function enqueue_scripts() {
 			?>
 			<script>
-				;(function(window) {
-					'use strict';
-					if (!window.MutationObserver) {
-						return;
-					}
+				jQuery(document).ready(function($) {
+					;(function(window) {
+						'use strict';
+						if (!window.MutationObserver) {
+							return;
+						}
 
-					var observer = new MutationObserver(function(mutations) {
-						mutations.forEach(function(mutation) {
-							if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') {
-								return;
-							}
-
-							var exceeded = mutation.target.classList.contains('wp-smush-exceed-limit');
-							if (exceeded) {
-								const button = mutation.target.querySelector('.wp-smush-resume-bulk-smush') ?? mutation.target.querySelector('.wp-smush-all');
-								
-								if (button) {
-									button.click();
+						var observer = new MutationObserver(function(mutations) {
+							mutations.forEach(function(mutation) {
+								if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') {
+									return;
 								}
-							}
-						});
-					});
 
-					const container = document.querySelector('.wp-smush-bulk-progress-bar-wrapper');
-					if (container) {
-						observer.observe(container, {attributes: true});
-					}
-				})(window);
+								var exceeded = mutation.target.classList.contains('wp-smush-exceed-limit');
+								if (exceeded) {
+									const button = mutation.target.querySelector('.wp-smush-resume-bulk-smush');
+									if (button) {
+										button.click();
+									}
+								}
+							});
+						});
+
+						const container = document.querySelector('.wp-smush-bulk-progress-bar-wrapper');
+						if (container) {
+							observer.observe(container, {attributes: true});
+						}
+					})(window);
+				});
 			</script>
 		<?php
 		}
