@@ -1,7 +1,9 @@
+.gitignore
+.DS_Store
+README.md
+.distignore
+dist
 /.wordpress-org
 /.git
 /.github
 /node_modules
-
-.distignore
-.gitignore
