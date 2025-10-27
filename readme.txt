@@ -23,7 +23,7 @@ Enjoy seamless, unlimited image optimization with zero extra setup!
 
 **GitHub:** [Disable Bulk Smush Limit of Smush Image Optimization](https://github.com/obiPlabon/wp-nonstop-smushit)
 
-== Hire Me ==
+== 💼 Hire Me ==
 👋 Hi, I’m **Obidullah**, a WordPress developer and plugin specialist.  
 I’ve built several popular plugins and custom solutions for businesses and agencies.  
 If you need help with custom plugin development, optimization, or AI-powered WordPress tools — let’s work together!
