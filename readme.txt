@@ -30,6 +30,17 @@ If you need help with custom plugin development, optimization, or AI-powered Wor
 
 👉 [Hire Me](https://obiplabon.com/contact)
 
+== Disclaimer ==
+
+Hey there! 💛  
+This plugin is completely free and made with love to help the WordPress community.  
+If you ever face any compatibility issue or unexpected behavior, please don’t rush to leave a bad rating — it can be really discouraging for a free project like this. 😔  
+
+Instead, please **report the issue first** — I genuinely appreciate every bit of feedback and do my best to fix problems quickly.  
+Your encouragement, kind words, and support are what keep this plugin alive and improving. 🌱💪  
+
+👉 [Report an Issue or Get Help](https://github.com/obiPlabon/wp-nonstop-smushit/issues/new)
+
 == Frequently Asked Questions ==
 
 = Is it free? =  
