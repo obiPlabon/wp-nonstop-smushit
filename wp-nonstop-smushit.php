@@ -12,6 +12,9 @@
  * Plugin URI:  https://github.com/obiPlabon/wp-nonstop-smushit
  * Description: The free version of Smush Image Optimization has a bulk image optimization limit of 50 images per iteration. This plugin disables that limit and allows you to optimize unlimited images.
  * Version:     2.3.0
+ * Requires at least: 6.0
+ * Tested up to: 6.8
+ * Requires PHP: 7.4
  * Author:      obiPlabon
  * Author URI:  https://obiPlabon.com/
  * License:     GPLv2
@@ -36,7 +39,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-Copyright 2019 obiPlabon <https://obiPlabon.im>
+Copyright 2019 obiPlabon <https://obiPlabon.com>
 */
 
 defined( 'ABSPATH' ) || die();

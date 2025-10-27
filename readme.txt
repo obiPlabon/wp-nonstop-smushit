@@ -1,16 +1,13 @@
 === Disable Bulk Smush Limit of Smush Image Optimization ===
-Plugin Name: Disable Bulk Smush Limit of Smush Image Optimization
-Version: 2.1.0
-Author: obiPlabon
-Author URI: https://github.com/obiplabon
 Contributors: obiplabon
 Tags: compress images, image optimization, optimize images
-Requires at least: 4.6
-Tested up to: 6.6
-Requires PHP: 5.4
-Stable tag: 2.1.0
+Requires at least: 6.0
+Tested up to: 6.8
+Requires PHP: 7.4
+Stable tag: 2.2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://obiplabon.com/contact
 
 Disable bulk smush limit and enjoy a premium feature of ***Smush Image Optimization*** completely FREE 😉
 
@@ -20,6 +17,8 @@ Disable bulk smush limit and enjoy a premium feature of ***Smush Image Optimizat
 Note: This plugin doesn't have any user interface or UI.
 
 Github: [Disable Bulk Smush Limit of Smush Image Optimization](https://github.com/obiPlabon/wp-nonstop-smushit)
+
+
 
 == Frequently Asked Questions ==
 
@@ -47,9 +46,3 @@ Yes, it's completely free forever.
 = 1.0.0 =
 
 * Initial release
-
-No worries, there will not be any problem form WP Smushit.
-
-== About ==
-
-Hello, This is Obi from Bangladesh with 8 years of WordPress development experience and focus on JavaScript, WooCommerce and Elementor. Currently working on an awesome Elementor project called [HappyAddons](https://wordpress.org/plugins/happy-elementor-addons/), don't forget to check those mind blowing designs! And I am available for freelance work and if you need any assistance with your WordPress project feel free share and say 👋 (hi, hello) on facebook: https://fb.me/obiPlabon
